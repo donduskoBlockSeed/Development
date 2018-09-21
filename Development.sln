@@ -3,7 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Development", "Development\Development.pyproj", "{B3DC0F76-6881-4DBD-B4A3-1D6EC53A4839}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Helper_Classes", "Helper_Classes\Helper_Classes.pyproj", "{BE71AF06-B872-4CCF-B452-726D523AC504}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Additional_Files", "Additional_Files", "{7B72D949-CF2D-4DD7-B539-98C129445B0E}"
+	ProjectSection(SolutionItems) = preProject
+		configurations.ini = configurations.ini
+	EndProjectSection
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Database_Filler", "Database_Filler\Database_Filler.pyproj", "{0F0B8A6F-4BBF-4206-9883-43DB8D2995D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,8 +18,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B3DC0F76-6881-4DBD-B4A3-1D6EC53A4839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B3DC0F76-6881-4DBD-B4A3-1D6EC53A4839}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE71AF06-B872-4CCF-B452-726D523AC504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE71AF06-B872-4CCF-B452-726D523AC504}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F0B8A6F-4BBF-4206-9883-43DB8D2995D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F0B8A6F-4BBF-4206-9883-43DB8D2995D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
