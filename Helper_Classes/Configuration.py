@@ -5,6 +5,7 @@ Contact: dominik@blockseedinvestments.com
 """
 
 from configparser import ConfigParser
+from pathlib import Path
 
 class Configuration:
     """Configuration object definition"""
@@ -14,24 +15,27 @@ class Configuration:
     @property
     def file(self):
         """Stores the filename of the configuration file"""
-        return self.filename
+        return self._file
 
     @file.setter
-    def filename(self, name):
-        self.file = ConfigParser().read(name)
+    def file(self, name):
+        name = Path(name)
+        if name.exists():
+            self._file = ConfigParser()
+            self._file.read(name)
+        else:
+            raise IOError('{} does not exist.'.format(name.resolve()))
 
-    @classmethod
-    def get_field(cls, field, setting_name):
+    def get_field(self, field, setting_name):
         """Method to retrieve fields from the configuration file """
-        ret_field = cls.file.get(setting_name, field)
+        ret_field = self.file.get(setting_name, field)
         if ',' in ret_field:
             ret_field = [X.strip() for X in ret_field.split(',')]
-            ret_field = [int(X) if cls.isint(X) else float(X) for i, X in enumerate(ret_field)]
+            ret_field = [int(X) if self.isint(X) else float(X) for i, X in enumerate(ret_field)]
             if '' in ret_field:
                 ret_field.remove('')
 
-    @classmethod
-    def isfloat(cls, val):
+    def isfloat(self, val):
         """Check if str value is float"""
         try:
             float(val)
@@ -40,8 +44,7 @@ class Configuration:
         else:
             return True
 
-    @classmethod
-    def isint(cls, val):
+    def isint(self, val):
         """Check if str value is int"""
         try:
             float(val)

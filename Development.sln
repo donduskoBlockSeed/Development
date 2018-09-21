@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Additional_Files", "Additio
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Database_Filler", "Database_Filler\Database_Filler.pyproj", "{0F0B8A6F-4BBF-4206-9883-43DB8D2995D2}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Main", "Main\Main.pyproj", "{B08C03FA-16C8-4884-83C1-2D7F42C0D584}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +24,8 @@ Global
 		{BE71AF06-B872-4CCF-B452-726D523AC504}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F0B8A6F-4BBF-4206-9883-43DB8D2995D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0F0B8A6F-4BBF-4206-9883-43DB8D2995D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B08C03FA-16C8-4884-83C1-2D7F42C0D584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B08C03FA-16C8-4884-83C1-2D7F42C0D584}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

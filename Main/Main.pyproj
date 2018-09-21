@@ -2,18 +2,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>0f0b8a6f-4bbf-4206-9883-43db8d2995d2</ProjectGuid>
-    <ProjectHome>
-    </ProjectHome>
-    <StartupFile>fill_databases.py</StartupFile>
+    <ProjectGuid>b08c03fa-16c8-4884-83c1-2d7f42c0d584</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>Database_Filler</Name>
-    <RootNamespace>DatabaseFiller</RootNamespace>
-    <IsWindowsApplication>False</IsWindowsApplication>
-    <InterpreterId>CondaEnv|CondaEnv|Python 3.6 (Anaconda)</InterpreterId>
+    <Name>Main</Name>
+    <RootNamespace>Main</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -24,33 +21,19 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="CMC\coin_market_cap\items.py" />
-    <Compile Include="CMC\coin_market_cap\middlewares.py" />
-    <Compile Include="CMC\coin_market_cap\pipelines.py" />
-    <Compile Include="CMC\coin_market_cap\settings.py" />
-    <Compile Include="CMC\coin_market_cap\spiders\scrape_cmc.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="CMC\coin_market_cap\spiders\__init__.py" />
-    <Compile Include="CMC\coin_market_cap\__init__.py" />
-    <Compile Include="fill_databases.py" />
+    <Compile Include="main.py" />
   </ItemGroup>
   <ItemGroup>
-    <InterpreterReference Include="CondaEnv|CondaEnv|Python 3.6 (Anaconda)" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\Database_Filler\Database_Filler.pyproj">
+      <Name>Database_Filler</Name>
+      <Project>{0f0b8a6f-4bbf-4206-9883-43db8d2995d2}</Project>
+      <Private>True</Private>
+    </ProjectReference>
     <ProjectReference Include="..\Helper_Classes\Helper_Classes.pyproj">
       <Name>Helper_Classes</Name>
       <Project>{be71af06-b872-4ccf-b452-726d523ac504}</Project>
       <Private>True</Private>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CMC\" />
-    <Folder Include="CMC\coin_market_cap\" />
-    <Folder Include="CMC\coin_market_cap\spiders\" />
-    <Folder Include="CMC\coin_market_cap\spiders\__pycache__\" />
-    <Folder Include="CMC\coin_market_cap\__pycache__\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

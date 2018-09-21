@@ -25,16 +25,6 @@
     <Compile Include="databases.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="__init__.py">
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DatabaseFiller\DatabaseFiller.pyproj">
-      <Name>DatabaseFiller</Name>
-      <Project>{0f0b8a6f-4bbf-4206-9883-43db8d2995d2}</Project>
-      <Private>True</Private>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
