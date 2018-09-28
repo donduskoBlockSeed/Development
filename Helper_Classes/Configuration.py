@@ -4,8 +4,8 @@ Author : Dominik Ondusko
 Contact: dominik@blockseedinvestments.com
 """
 
-from configparser import ConfigParser
-from pathlib import Path
+import configparser
+import pathlib
 
 class Configuration:
     """Configuration object definition"""
@@ -19,9 +19,9 @@ class Configuration:
 
     @file.setter
     def file(self, name):
-        name = Path(name)
+        name = pathlib.Path(name)
         if name.exists():
-            self._file = ConfigParser()
+            self._file = configparser.ConfigParser()
             self._file.read(name)
         else:
             raise IOError('{} does not exist.'.format(name.resolve()))
@@ -31,9 +31,10 @@ class Configuration:
         ret_field = self.file.get(setting_name, field)
         if ',' in ret_field:
             ret_field = [X.strip() for X in ret_field.split(',')]
-            ret_field = [int(X) if self.isint(X) else float(X) for i, X in enumerate(ret_field)]
+            ret_field = [int(X) if self.isint(X) else float(X) if self.isfloat(X) else X for i, X in enumerate(ret_field)]
             if '' in ret_field:
                 ret_field.remove('')
+        return ret_field
 
     def isfloat(self, val):
         """Check if str value is float"""

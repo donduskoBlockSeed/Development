@@ -14,6 +14,8 @@ Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Database_Filler", "Database
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Main", "Main\Main.pyproj", "{B08C03FA-16C8-4884-83C1-2D7F42C0D584}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Deltix_Handler", "Deltix_Handler\Deltix_Handler.pyproj", "{70247390-2B11-4376-B26C-F6215C6B0923}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,8 @@ Global
 		{0F0B8A6F-4BBF-4206-9883-43DB8D2995D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B08C03FA-16C8-4884-83C1-2D7F42C0D584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B08C03FA-16C8-4884-83C1-2D7F42C0D584}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70247390-2B11-4376-B26C-F6215C6B0923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70247390-2B11-4376-B26C-F6215C6B0923}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

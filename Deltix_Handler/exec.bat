@@ -1,0 +1,1 @@
+tickdb -exec exec C:\Users\Dominik\Desktop\Development\Deltix_Handler\commands.txt -exit
